@@ -27,7 +27,9 @@ const Dashboard = () => {
   
         const copyNewCard = { ...newCard }
         
-        if(newCard.option === "expenses") {
+        if(newCard.option === "Expenses") {
+
+            Number(copyNewCard.price)
 
             copyNewCard.price = -copyNewCard.price
         }
@@ -102,7 +104,7 @@ const Dashboard = () => {
                         <section>
                             <Input
                             size="s"
-                            type="number"
+                            type="text"
                             name="price"
                             autoComplete="off"
                             placeholder="US$"
