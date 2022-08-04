@@ -29,7 +29,7 @@ const Dashboard = () => {
         
         if(newCard.option === "Expenses") {
 
-            Number(copyNewCard.price)
+            +copyNewCard.price
 
             copyNewCard.price = -copyNewCard.price
         }
