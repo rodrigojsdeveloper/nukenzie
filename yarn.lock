@@ -703,7 +703,7 @@ magic-string@^0.26.2:
   dependencies:
     sourcemap-codec "^1.4.8"
 
-mini-create-react-context@^0.4.0:
+mini-create-react-context@^0.4.0, mini-create-react-context@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/mini-create-react-context/-/mini-create-react-context-0.4.1.tgz#072171561bfdc922da08a60c2197a497cc2d1d5e"
   integrity sha512-YWCYEmd5CQeHGSAKrYvXgmzzkrvssZcuuQDDeqkT+PziKGMgE+0MCCtcKbROzocGBG1meBLl2FotlRwf4gAzbQ==
