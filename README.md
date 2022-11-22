@@ -43,5 +43,5 @@ https://nu-kenzie-one-kohl.vercel.app
 ### Developer
 
 <a href="https://www.linkedin.com/in/rodrigo-de-jesus-silva">
-    <img src="front-end/src/assets/icon-linkedin.png" />
+    <img src="src/assets/icon-linkedin.png" />
 </a>
