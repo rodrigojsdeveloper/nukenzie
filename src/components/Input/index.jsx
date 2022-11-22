@@ -1,4 +1,4 @@
-import { Container, InputContainer } from "./style"
+import { Container, InputContainer } from './style'
 
 
 const Input = ({ label, register, name, error, size, ...rest }) => {
@@ -12,4 +12,4 @@ const Input = ({ label, register, name, error, size, ...rest }) => {
   )
 }
 
-export default Input
+export { Input }

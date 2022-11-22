@@ -1,7 +1,7 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 
-export const Container = styled.div`
+const Container = styled.div`
 
     margin: 0 auto;
     max-width: 1440px;
@@ -34,7 +34,7 @@ export const Container = styled.div`
     }
 `
 
-export const HeaderStyled = styled.header`
+const HeaderStyled = styled.header`
 
     background: var(--background-header-dashboard);
     box-shadow: 0px 4px 32px -12px var(--color-box-shadow);
@@ -65,7 +65,7 @@ export const HeaderStyled = styled.header`
     }
 `
 
-export const Content = styled.form`
+const Content = styled.form`
 
     width: 363px;
     height: 351px;
@@ -144,3 +144,5 @@ export const Content = styled.form`
         margin-top: 1.5rem;
     }
 `
+
+export { Container, Content, HeaderStyled }

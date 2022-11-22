@@ -1,14 +1,14 @@
-import { ButtonStyled } from "./style"
-import React from "react"
+import { Container } from './style'
+import React from 'react'
 
 
 const Button = ({ children, size, color, ...rest }) => {
 
     return (
-        <ButtonStyled size={ size } color={ color } {...rest}>
+        <Container size={ size } color={ color } {...rest}>
             { children }
-        </ButtonStyled>
+        </Container>
     )
 }
 
-export default Button
+export { Button }

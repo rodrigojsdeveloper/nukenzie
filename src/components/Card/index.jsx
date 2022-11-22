@@ -1,5 +1,5 @@
-import { Container } from "./style"
-import React from "react"
+import { Container } from './style'
+import React from 'react'
 
 
 const Card = ({ card, removeCard }) => {
@@ -7,7 +7,7 @@ const Card = ({ card, removeCard }) => {
     return (
         <Container>
 
-            <hr style={ card.option === "Entry" ? {background: "#03B898"}  : {background: "#E9ECEF"} } />
+            <hr style={ card.option === 'Entry' ? { background: '#03B898' }  : { background: '#E9ECEF' } } />
 
             <div>
                 <div className="divCardLeft">
@@ -27,4 +27,4 @@ const Card = ({ card, removeCard }) => {
     )
 }
 
-export default Card
+export { Card }

@@ -1,20 +1,20 @@
-import { Switch, Route } from "react-router-dom"
-import Dashboard from "../pages/Dashboard"
-import NotFound from "../pages/NotFound"
-import Home from "../pages/Home"
-import React from "react"
+import { Switch, Route } from 'react-router-dom'
+import { Dashboard } from '../pages/Dashboard'
+import { NotFound } from '../pages/NotFound'
+import { Home } from '../pages/Home'
+import React from 'react'
 
 
 const Routes = () => {
     
     return (
         <Switch>
-            <Route exact path="/">
-                <Home />
-            </Route>
-            
             <Route path="/dashboard">
                 <Dashboard />
+            </Route>
+
+            <Route exact path="/">
+                <Home />
             </Route>
 
             <Route component={ NotFound } />
@@ -22,4 +22,4 @@ const Routes = () => {
     )
 }
 
-export default Routes
+export { Routes }

@@ -1,7 +1,7 @@
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js"
-import { Doughnut } from "react-chartjs-2"
-import { Container } from "./style"
-import React from "react"
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
+import { Doughnut } from 'react-chartjs-2'
+import { Container } from './style'
+import React from 'react'
 
 
 const CardTotal = ({ cards }) => {
@@ -10,22 +10,22 @@ const CardTotal = ({ cards }) => {
 
     const data = {
 
-        labels: [ "Entry", "Expenses" ],
+        labels: [ 'Entry', 'Expenses' ],
         datasets: [
             {
-                label: "# of Votes",
+                label: '# of Votes',
                 data: [
-                    cards.filter(card => card.option === "Entry").reduce((valoAnterior, valorAtual) => valoAnterior + +valorAtual.price, 0),
+                    cards.filter(card => card.option === 'Entry').reduce((valoAnterior, valorAtual) => valoAnterior + +valorAtual.price, 0),
 
-                    cards.filter(card => card.option === "Expenses").reduce((valoAnterior, valorAtual) => valoAnterior + +valorAtual.price, 0)
+                    cards.filter(card => card.option === 'Expenses').reduce((valoAnterior, valorAtual) => valoAnterior + +valorAtual.price, 0)
                 ],
                 backgroundColor: [
-                    "rgb(3, 184, 152)",
-                    "rgb(233, 236, 239)"
+                    'rgb(3, 184, 152)',
+                    'rgb(233, 236, 239)'
                 ],
                 borderColor: [
-                    "rgb(3, 184, 152)",
-                    "rgb(233, 236, 239)"
+                    'rgb(3, 184, 152)',
+                    'rgb(233, 236, 239)'
                 ]
             }
         ]
@@ -34,10 +34,10 @@ const CardTotal = ({ cards }) => {
 
     return (
         <Container>
-            <p>Amount: <span>$ { cards.reduce((valoAnterior, valorAtual) => valoAnterior + +valorAtual.price, 0).toFixed(2).replace(".", ",") }</span></p>
+            <p>Amount: <span>$ { cards.reduce((valoAnterior, valorAtual) => valoAnterior + +valorAtual.price, 0).toFixed(2).replace('.', ',') }</span></p>
             <Doughnut data={ data } />
         </Container>
     )
 }
 
-export default CardTotal
+export { CardTotal }

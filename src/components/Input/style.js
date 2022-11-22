@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components"
+import styled, { css } from 'styled-components'
 
 
-export const Container = styled.div`
+const Container = styled.div`
 
     text-align: left;
     
@@ -16,7 +16,7 @@ export const Container = styled.div`
     }
 `
 
-export const InputContainer = styled.input`
+const InputContainer = styled.input`
 
     background: var(--background-header-dashboard);
     border: 2px solid var(--background-header-dashboard);
@@ -39,14 +39,14 @@ export const InputContainer = styled.input`
 
         switch(props.size) {
 
-            case "m":
+            case 'm':
                 return css`
                     height: 52.8px;
                     width: 100%;
                     max-width: 314px;
                 `
             
-            case "s":
+            case 's':
                     return css`
                     width: 100%;
                     max-width: 128px;
@@ -58,3 +58,5 @@ export const InputContainer = styled.input`
         }
     }}
 `
+
+export { Container, InputContainer }

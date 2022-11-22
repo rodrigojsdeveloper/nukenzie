@@ -1,7 +1,7 @@
-import { List, ListHeader, ListBody } from "./style"
-import cardsVoids from "../../assets/NoCard.png"
-import Button from "../Button"
-import React from "react"
+import { List, ListHeader, ListBody } from './style'
+import cardsVoids from '../../assets/NoCard.png'
+import { Button } from '../Button'
+import React from 'react'
 
 
 const ListCard = ({ cards, setFilterCards, children }) => {
@@ -15,10 +15,10 @@ const ListCard = ({ cards, setFilterCards, children }) => {
                     <Button size="s" color="dashboard" onClick={ () => setFilterCards([]) }>
                         All
                     </Button>
-                    <Button size="s" color="dashboard" onClick={ () => setFilterCards(cards.filter(card => card.option === "Entry")) }>
+                    <Button size="s" color="dashboard" onClick={ () => setFilterCards(cards.filter(card => card.option === 'Entry')) }>
                         Entry
                     </Button>
-                    <Button size="s" color="dashboard" onClick={ () => setFilterCards(cards.filter(card => card.option === "Expenses")) }>
+                    <Button size="s" color="dashboard" onClick={ () => setFilterCards(cards.filter(card => card.option === 'Expenses')) }>
                         Expenses
                     </Button>
                 </nav>
@@ -43,4 +43,4 @@ const ListCard = ({ cards, setFilterCards, children }) => {
     )
 }
 
-export default ListCard
+export { ListCard }

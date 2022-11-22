@@ -1,7 +1,7 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 
-export const Container = styled.div`
+const Container = styled.div`
     
     display: flex;
     justify-content: center;
@@ -14,13 +14,14 @@ export const Container = styled.div`
     color: var(--white);
 `
 
-export const Content = styled.div`
+const Content = styled.div`
 
     width: 100%;
     max-width: 1024px;
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     & > div h1 {
         font-size: 38px;
@@ -58,16 +59,13 @@ export const Content = styled.div`
         }
     }
 
-    @media screen and (min-width: 768px) {
-
-        align-items: center;
-        flex-direction: row;
-    }
-
     @media screen and (max-width: 1000px) {
 
-        flex-direction: column;
-        justify-content: unset;
-        align-items: unset;
+        .logo {
+
+            display: none;
+        }
     }
 `
+
+export { Container, Content }

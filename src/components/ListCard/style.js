@@ -1,7 +1,7 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 
-export const List = styled.div`
+const List = styled.div`
 
     width: 100%;
     max-width: 560px;
@@ -13,7 +13,7 @@ export const List = styled.div`
     }
 `
 
-export const ListHeader = styled.div`
+const ListHeader = styled.div`
 
     display: flex;
     align-items: center;
@@ -67,7 +67,7 @@ export const ListHeader = styled.div`
     }
 `
 
-export const ListBody = styled.div`
+const ListBody = styled.div`
 
     h2 {
         padding-bottom: 35px;
@@ -77,3 +77,5 @@ export const ListBody = styled.div`
         width: 100%;
     }
 `
+
+export { List, ListHeader, ListBody }

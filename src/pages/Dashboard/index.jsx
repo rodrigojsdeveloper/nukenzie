@@ -1,33 +1,33 @@
-import { Container, HeaderStyled, Content } from "./style"
-import { yupResolver } from "@hookform/resolvers/yup"
-import title from "../../assets/Nu-Kenzie-black.png"
-import useLocalStorage from "../../components/Hook"
-import CardTotal from "../../components/CardTotal"
-import ListCard from "../../components/ListCard"
-import { useHistory } from "react-router-dom"
-import Button from "../../components/Button"
-import Input from "../../components/Input"
-import { useForm } from "react-hook-form"
-import Card from "../../components/Card"
-import React, { useState } from "react"
-import * as yup from "yup"
+import { Container, HeaderStyled, Content } from './style'
+import { useLocalStorage } from '../../components/Hook'
+import { CardTotal } from '../../components/CardTotal'
+import { yupResolver } from '@hookform/resolvers/yup'
+import title from '../../assets/Nu-Kenzie-black.png'
+import { ListCard } from '../../components/ListCard'
+import { Button } from '../../components/Button'
+import { Input } from '../../components/Input'
+import { useHistory } from 'react-router-dom'
+import { Card } from '../../components/Card'
+import { useForm } from 'react-hook-form'
+import React, { useState } from 'react'
+import * as yup from 'yup'
 
 
 const Dashboard = () => {
 
     const history = useHistory()
 
-    const [ cards, setCards ] = useLocalStorage("Nu Kenzie: cards", [])
+    const [ cards, setCards ] = useLocalStorage('Nu Kenzie: cards', [])
 
-    const [ option, setOption ] = useState("Entry")
+    const [ filterCards, setFilterCards ] = useLocalStorage('Nu Kenzie: filter', [])
 
-    const [ filterCards, setFilterCards ] = useLocalStorage("Nu Kenzie: filter", [])
+    const [ option, setOption ] = useState('Entry')
   
     const addCard = newCard => {
   
         const copyNewCard = { ...newCard }
         
-        if(newCard.option === "Expenses") {
+        if(newCard.option === 'Expenses') {
 
             +copyNewCard.price
 
@@ -48,11 +48,11 @@ const Dashboard = () => {
     
         description: yup
             .string()
-            .required("Required field"),
+            .required('Required description'),
         
         price: yup
             .string()
-            .required("")
+            .required('')
     })
 
     const { register, handleSubmit, formState: { errors } } = useForm({
@@ -77,7 +77,7 @@ const Dashboard = () => {
                     <Button
                     size="s"
                     color="dashboard"
-                    onClick={ () => history.push("/", { message: "You are home" } ) }
+                    onClick={ () => history.push('/', { message: 'You are home' } ) }
                     >Start</Button>
                 </div>
             </HeaderStyled>
@@ -154,4 +154,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+export { Dashboard }

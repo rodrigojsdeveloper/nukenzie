@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components"
+import styled, { css } from 'styled-components'
 
 
-export const ButtonStyled = styled.button`
+const Container = styled.button`
 
     font-weight: 500;
     font-size: 16px;
@@ -49,7 +49,7 @@ export const ButtonStyled = styled.button`
 
         switch(props.color) {
 
-            case "home":
+            case 'home':
                 return css`
                     color: var(--white);
                     background: var(--background-button-home);
@@ -61,7 +61,7 @@ export const ButtonStyled = styled.button`
                     }
                 `
             
-            case "dashboard":
+            case 'dashboard':
                 return css`
                     color: var(--color-text-header);
                     background: var(--background-button-dashboard);
@@ -78,3 +78,5 @@ export const ButtonStyled = styled.button`
         }
     }}
 `
+
+export { Container }

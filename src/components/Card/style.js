@@ -1,9 +1,9 @@
-import lixeira_hover from "../../assets/lixeira-hover.png"
-import lixeira from "../../assets/lixeira.png"
-import styled from "styled-components"
+import lixeira_hover from '../../assets/lixeira-hover.png'
+import lixeira from '../../assets/lixeira.png'
+import styled from 'styled-components'
 
 
-export const Container = styled.div`
+const Container = styled.div`
 
     display: flex;
     width: 100%;
@@ -73,7 +73,7 @@ export const Container = styled.div`
         height: 22px;
         cursor: pointer;
         background: var(--background-button-dashboard);
-        background: url(${lixeira});
+        background: url(${ lixeira });
 
         transition: 1s;
 
@@ -81,7 +81,7 @@ export const Container = styled.div`
     }
 
     .divCardRight > button:hover {
-        background: url(${lixeira_hover});
+        background: url(${ lixeira_hover });
     }
 
     @media screen and (max-width: 510px) {
@@ -92,3 +92,5 @@ export const Container = styled.div`
         }
     }
 `
+
+export { Container }
