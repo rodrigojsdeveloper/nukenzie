@@ -1,30 +1,32 @@
-import { Container } from './style'
-import React from 'react'
-
+import { Container } from "./style";
+import React from "react";
 
 const Card = ({ card, removeCard }) => {
+  return (
+    <Container>
+      <hr
+        style={
+          card.option === "Entry"
+            ? { background: "#03B898" }
+            : { background: "#E9ECEF" }
+        }
+      />
 
-    return (
-        <Container>
+      <div>
+        <div className="divCardLeft">
+          <h2>{card.description}</h2>
 
-            <hr style={ card.option === 'Entry' ? { background: '#03B898' }  : { background: '#E9ECEF' } } />
+          <span>{card.option}</span>
+        </div>
 
-            <div>
-                <div className="divCardLeft">
-                    <h2>{ card.description }</h2>
+        <div className="divCardRight">
+          <span>US$ {card.price}</span>
 
-                    <span>{ card.option }</span>
-                </div>
+          <button onClick={() => removeCard(card)}></button>
+        </div>
+      </div>
+    </Container>
+  );
+};
 
-                <div className="divCardRight">
-                    <span>US$ { card.price }</span>
-
-                    <button onClick={ () => removeCard(card) }></button>
-                </div>
-            </div>
-            
-        </Container>
-    )
-}
-
-export { Card }
+export { Card };
